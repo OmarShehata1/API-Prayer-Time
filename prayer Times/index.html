@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مواقيت الصلاة</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="theme-light">
+    <div class="theme-switcher">
+      <select id="themeSelect" onchange="changeTheme(this.value)">
+        <option value="theme-light">فاتح</option>
+        <option value="theme-dark">داكن</option>
+        <option value="theme-blue">أزرق</option>
+        <option value="theme-green">أخضر</option>
+      </select>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <!-- Header -->
+        <header>
+          <h1>مواقيت الصلاة</h1>
+          <select id="citySelect" class="city-select"></select>
+          <p id="currentDate" class="date"></p>
+        </header>
+
+        <!-- Prayer Times Grid -->
+        <div class="prayer-grid">
+          <div class="prayer-card">
+            <h2>الفجر</h2>
+            <p id="fajr" class="time">--:--</p>
+          </div>
+          <div class="prayer-card">
+            <h2>الشروق</h2>
+            <p id="sunrise" class="time">--:--</p>
+          </div>
+          <div class="prayer-card">
+            <h2>الظهر</h2>
+            <p id="dhuhr" class="time">--:--</p>
+          </div>
+          <div class="prayer-card">
+            <h2>العصر</h2>
+            <p id="asr" class="time">--:--</p>
+          </div>
+          <div class="prayer-card">
+            <h2>المغرب</h2>
+            <p id="maghrib" class="time">--:--</p>
+          </div>
+          <div class="prayer-card">
+            <h2>العشاء</h2>
+            <p id="isha" class="time">--:--</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Layout */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Header Styles */
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .city-select {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 200px;
+  }
+  
+  .date {
+    font-size: 1.1rem;
+  }
+  
+  /* Prayer Grid */
+  .prayer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .prayer-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .prayer-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .prayer-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .time {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Theme Switcher */
+  .theme-switcher {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+  }
+  
+  .theme-switcher select {
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  /* Light Theme */
+  .theme-light {
+    background-color: #f0f2f5;
+    color: #1a1a1a;
+  }
+  
+  .theme-light .prayer-card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .theme-light .time {
+    color: #2563eb;
+  }
+  
+  /* Dark Theme */
+  .theme-dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+  
+  .theme-dark .prayer-card {
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .theme-dark .time {
+    color: #60a5fa;
+  }
+  
+  /* Blue Theme */
+  .theme-blue {
+    background-color: #1e3a8a;
+    color: #ffffff;
+  }
+  
+  .theme-blue .prayer-card {
+    background-color: #1e40af;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .theme-blue .time {
+    color: #93c5fd;
+  }
+  
+  /* Green Theme */
+  .theme-green {
+    background-color: #064e3b;
+    color: #ffffff;
+  }
+  
+  .theme-green .prayer-card {
+    background-color: #065f46;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .theme-green .time {
+    color: #6ee7b7;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .prayer-card {
+      padding: 1rem;
+    }
+  
+    .time {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Select Styles */
+  select {
+    background-color: transparent;
+    border: 1px solid currentColor;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  select option {
+    background-color: inherit;
+    color: #000;
+  }
+  
+  /* Transitions */
+  .prayer-card, body, select {
+    transition: all 0.3s ease;
+  }
